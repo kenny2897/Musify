@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <style media="screen">
+
+/*Color and ratio of the body*/
+ html,body{
+ background-color:#d6e0f5;
+ margin:0;
+ padding:0;
+ width: 100%;
+ height: 100%;
+ }
+
+/*Color and ratio of the header*/
+ header{
+height:10%;
+width:100%;
+background-color:black
+ }
+
+
+
+
+
+/*ratio of the logo on the header*/
+ #HeadLogo{
+height:89px;
+width:89px;
+margin-left:45%;
+}
+
+/*Style of the title*/
+/* #Title{
+color: white;
+position : absolute;
+margin-left: 46%;
+} */
+
+/*Navigation bar on top*/
+.TopNav {
+background-color:  	#A9A9A9;
+border-color:black;
+border: 2px solid black;
+border-radius: 5px;
+}
+
+/*Action while hover on SearchButton*/
+#SearchButton:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+/*ratio and position of SearchButton*/
+ #SearchButton{
+height: 40px;
+width: 100px;
+position: relative;
+margin-top: 0.3%;
+margin-left: 93.30%;
+border: 1px solid: black;
+border-radius: 5px;
+ }
+
+/*SearchBar ratio and style*/
+
+ #SearchBar{
+   height: 35px;
+   width: 275px;
+   position: absolute; /** move freely the button **/
+   margin-top: 0.3%;
+   margin-left: 74.50%;
+   background-color:White;
+   color:white;
+   border: 2px solid: #A9A9A9 ;
+   border-radius: 5px;
+ }
+
+/*Action while hover on SearchBar*/
+ #SearchBar:hover {
+   background-color: white;
+   color: black;
+     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+
+ /*Action while focus on SearchBar*/
+ #SearchBar:focus {
+   background-color: white;
+   color: black;
+     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+ }
+
+ /*LoginButton ratio and position*/
+ #LoginButton{
+  height: 40px;
+  width: 100px;
+  position: absolute; /** move freely the button **/
+  margin-left: 93.25%;
+  background-color: black;
+  color: white;
+  border: 2px solid: #A9A9A9 ;
+  border-radius: 5px;
+}
+  /*Action while hover on LoginButton*/
+  #LoginButton:hover {
+    background-color: #CCD6DD;
+    color: black;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  /*HomeButton ratio and position*/
+   #Home{
+    height: 45px;
+    width: 100px;
+    position: absolute; /** move freely the button **/
+    border: 2px solid: #A9A9A9 ;
+    border-radius: 5px;
+     }
+
+  /*Action while hover on HomeButton*/
+    #Home:hover {
+      background-color: black;
+      color: white;
+      box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+     }
+
+/*Side navigation bar postion and ratio*/
+     .sidenav {
+       height: 100%;
+       width: 0;
+       position: fixed;
+       z-index: 1;
+       top: 0;
+       left: 0;
+       background-color: #111;
+       overflow-x: hidden;
+       transition: 0.5s;
+       padding-top: 60px;
+     }
+/*Side navigation bar button size and position*/
+     .sidenav a, .dropdown-btn {
+       padding: 8px 8px 8px 32px;
+       text-decoration: none;
+       font-size: 25px;
+       color: #818181;
+       display: block;
+       transition: 0.3s;
+     }
+/*Side navigation bar button action while hover*/
+     .sidenav a:hover, .dropdown-btn:hover {
+       color: #f1f1f1;
+     }
+/*Side navigation bar button action when selected*/
+     .sidenav a:active {
+       color: #f1f1f1;
+     }
+/*Side nafivigation bar X button size and position */
+     .sidenav .closebtn {
+       position: absolute;
+       top: 0;
+       right: 25px;
+       font-size: 36px;
+       margin-left: 50px;
+     }
+  /* Dropdown container (hidden by default). Optional: add a lighter background color
+   and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+     @media screen and (max-height: 450px) {
+       .sidenav {padding-top: 15px;}
+       .sidenav a {font-size: 18px;}
+     }
+
+
+/** trending block size,style and position **/
+.Trending{
+  background-color:#E1E8ED;
+  float: left;
+  position: relative;
+  margin-top: 70px;
+  margin-left: 50px;
+  width: 90%;
+  height: 32%;
+  border: 2px solid: #A9A9A9 ;
+  border-radius: 5px;
+}
+
+.slide {
+  margin-left: 60px;
+  margin-top: 22px;
+    margin-bottom:15px;
+    width:100%;
+    height:100%;
+  overflow:hidden;
+  border: 2px solid: #A9A9A9 ;
+  border-radius: 5px;
+}
+/** recommended block size,style and position **/
+.Recommended{
+  background-color:#E1E8ED;
+  float: left;
+  position: relative;
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 90%;
+  height: 32%;
+  border: 2px solid: #A9A9A9 ;
+  border-radius: 5px;
+}
+.slide2 {
+  margin-left: 60px;
+  margin-top: 22px;
+    margin-bottom:15px;
+    width:100%;
+    height:100%;
+  overflow:hidden;
+  border: 2px solid: #A9A9A9 ;
+  border-radius: 5px;
+
+}
+
+     #Trending{
+       position: absolute;
+       margin-top:32px;
+       margin-left:40px;
+     }
+     #Recommended{
+       position: absolute;
+       margin-left:42px;
+       margin-top: 370px;
+     }
+     a.logo {
+         display:inline-block;
+         float: left;
+
+     }
+     a.log {
+         display:inline-block;
+         float: left;
+
+     }
+     a:hover {
+         color: white;
+     }
+      .active {
+    background-color: green;
+    color: white;
+    }
+
+#DropdownButton{
+background-color: #111;
+border: none;
+outline: none;
+
+}
+
+     #logo {
+         border-radius: 5px;
+         padding: 1px;
+         display:block;
+         border: 1px solid #ccc;
+         width: 170px;
+         height: 200px;
+     }
+     .arrowleft, .arrowright {
+         font-size:30px;
+         cursor:pointer;
+         display:inline-block;
+         padding:20px;
+         background-color:red;
+     }
+     .arrowleft1, .arrowright1 {
+         font-size:30px;
+         cursor:pointer;
+         display:inline-block;
+         padding:20px;
+         background-color:red;
+     }
+
+     /* overlay */
+     #overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+/* shape */
+.shape{
+top:15%;
+left:31%;
+width:30%;
+height:75%;
+background: rgba(0, 0, 0, 0.5);
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+-khtml-border-radius: 10px;
+position: fixed;
+z-index: 2;
+}
+#shape{
+  display: none;
+}
+.contenu{
+text-align: center;
+}
+
+    </style>
+    <title>Musify</title>
+  </head>
+  <body>
+    <!-- <h1 id="Title">Musify</h1> -->
+    <button type="button" id="LoginButton" onclick="on()" name="LoginButton">Sign in </button>
+    <header>
+      <a class="HeadLogo"><img id="HeadLogo" src="musify.png"></a>
+
+     </header>
+
+
+     <div id="sidenav" class="sidenav">
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       <button class="dropdown-btn" id="DropdownButton"> Chart <i class="fa fa-caret-down"></i>
+       </button>
+     <div class="dropdown-container">
+         <a href="https://open.spotify.com/playlist/37i9dQZEVXbLRQDuF5jeBp">USA Top 50</a>
+         <a href="https://open.spotify.com/playlist/37i9dQZEVXbKj23U1GF4IR">Canada Top 50</a>
+         <a href="https://open.spotify.com/playlist/37i9dQZEVXbMDoHDwVN2tF">Global top 50</a>
+    </div>
+       <a href="#About">My playlist</a>
+       <a href="#Services">Library</a>
+       <a href="#Clients">Settings</a>
+       <a href="#Contact">Contact</a>
+    </div>
+
+
+
+
+      <div class="TopNav">
+            <button type="button" id="Home" name="HomeButton"style="cursor:pointer" onclick="openNav()">Home </button>
+            <input type="text" id="SearchBar" placeholder="Search..">
+            <button type="button" id="SearchButton" name="SearchButton">Search </button>
+
+    </div>
+
+        <h2 id="Trending">Trending</h2>
+        <div class="Trending">
+          <div class="slide">
+
+      	<a href="" class="logo"><img id="logo" src="LilNas.jpg"></a>
+      	<a href="" class="logo"><img id="logo" src="Post.jpg"></a>
+      	<a href="" class="logo"><img id="logo" src="Travis.jpg"></a>
+      	<a href="" class="logo"><img id="logo" src="Kodak.jpg"></a>
+      	<a href="" class="logo"><img id="logo" src="Kendrick.jpg"></a>
+      	<a href="" class="logo"><img id="logo" src="Drake.jpg"></a>
+      	<a href="" class="logo"><img id="logo" src="Lomepal.jpg"></a>
+
+
+        <a class="left carousel-control" href="#myCarousel" role="button" class="arrowright" id="next0" >
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control"  href="#myCarousel" role="button" class="arrowleft" id="prev0">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+      </div>
+<span></span>
+    </div>
+        <h2 id="Recommended">Recommended</h2>
+        <div class="Recommended">
+          <div class="slide2">
+
+            <a href="" class="log"><img id="logo" src="LilNas.jpg"></a>
+          	<a href="" class="log"><img id="logo" src="Post.jpg"></a>
+          	<a href="" class="log"><img id="logo" src="Travis.jpg"></a>
+          	<a href="" class="log"><img id="logo" src="Kodak.jpg"></a>
+          	<a href="" class="log"><img id="logo" src="Kendrick.jpg"></a>
+          	<a href="" class="log"><img id="logo" src="Drake.jpg"></a>
+          	<a href="" class="log"><img id="logo" src="Lomepal.jpg"></a>
+
+
+
+        <a class="left carousel-control" href="#myCarousel" role="button" class="arrowright1" id="next1" >
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control"  href="#myCarousel" role="button" class="arrowleft1" id="prev1">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+      </div>
+      <span></span>
+      </div>
+
+      <div id="overlay" onclick="off()">
+            </div>
+            <div id="shape" class="shape">
+            <div class="contenu">
+            <div class="entete">
+
+            <h2 style="color:white">Inscription</h2>
+            <hr>
+            </div>
+            <!-- <form class="modal-content" action="/action_page.php">
+              <div class="container" style="border-size:border-box">
+
+                <p align="center" style="color:white;">Veuillez remplir le formulaire pour creer un compte.</p>
+
+                  <input id="q" type="text" placeholder="Prenom" name="uprenom" required>
+                  <input id="w" type="text" placeholder="Nom" name="unom" required>
+                  <input id="e" type="text" placeholder="Adresse courriel" name="umail" required>
+                  <input id="r" type="password" placeholder="Mot de passe" name="umdp" required>
+                  <p id="dbirth">Date de naissance :</p>
+                  <input id="t" list="jour" name="unaissance" placeholder="jour">
+                  <input id="y" list="mois" name="unaissance" placeholder="mois">
+                  <input id="u" list="annee" name="unaissance" placeholder="annee">
+
+                  <div class="sexe">
+                    <input class="a" type="radio" name="male" value="Male">Homme <br>
+                    <input type="radio" class="b" name="female" value="">Femme <br>
+                    <input type="radio"  class="c" name="other" value="">Autre <br>
+                  </div>
+                <div class="boutt">
+                  <button id="b" align="center" type="submit" class="signupbtn">s'inscrire</button>
+
+                <div>
+                </div>
+              </div>
+            </form> -->
+                    </div>
+                  </div>
+      </div>
+
+
+
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+
+// *****************************************************
+
+// // Add active class to the current button (highlight it)
+// var header = document.getElementById("myDIV");
+// var btns = header.getElementsByClassName("btn");
+// for (var i = 0; i < btns.length; i++) {
+//   btns[i].addEventListener("click", function() {
+//   var current = document.getElementsByClassName("active");
+//   current[0].className = current[0].className.replace(" active", "");
+//   this.className += " active";
+//   });
+// }
+
+// *******************************************************
+      function openNav() {
+        document.getElementById("sidenav").style.width = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("sidenav").style.width = "0";
+      }
+      </script>
+
+<script>
+  // slideshow 1
+  $('#prev0').on('click', function () { //droite
+      var last = $('.logo').last().css({opacity: '0', width: '0px'});
+
+
+    last.prependTo('.slide');
+    last.animate({opacity: '1', width: '175px'});
+  });
+  $('#next0').on('click', function () { //gauche
+      var first = $('.logo').first();
+      first.animate({opacity: '0', width: '0px'}, function() {
+          first.appendTo('.slide').css({opacity: '1', width: '175px'});
+      });
+  });
+  // slideshow 2
+  $('#prev1').on('click', function () {
+      var last = $('.log').last().css({opacity: '0', width: '0px'});
+
+
+    last.prependTo('.slide2');
+    last.animate({opacity: '1', width: '175px'});
+  });
+  $('#next1').on('click', function () {
+      var first = $('.log').first();
+      first.animate({opacity: '0', width: '0px'}, function() {
+          first.appendTo('.slide2').css({opacity: '1', width: '175px'});
+      });
+  });
+  //overlay
+  function on() {
+  document.getElementById("overlay").style.display = "block";
+    document.getElementById("shape").style.display = "block";
+}
+function off() {
+  document.getElementById("overlay").style.display = "none";
+    document.getElementById("shape").style.display = "none";
+}
+</script>
+  </body>
+</html>
